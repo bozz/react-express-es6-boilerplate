@@ -1,5 +1,13 @@
-var RobotList = require('./components/RobotList');
+require('./styles/app.scss');
+
+var UserList = require('./components/UserList');
 var React = require('react');
 
-React.render(<RobotList />, document.getElementsByTagName('body')[0]);
+var users = [
+  {firstName: "John", lastName: "Doe"},
+  {firstName: "Susie", lastName: "Miller"},
+  {firstName: "Dan", lastName: "Fletcher"}
+];
+
+React.render(<UserList data={users} />, document.getElementById('content'));
 
